@@ -11,7 +11,7 @@ def start(update, context):
     context.bot.send_message(
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
         text=f"""
-📞 Connected11111 {user_info}.
+📞 Connected {user_info}.
         """,
     )
 
@@ -25,6 +25,8 @@ def forward_to_chat(update, context):
         'from': {'id': 49820636, 'first_name': 'Daniil', 'is_bot': False, 'last_name': 'Okhlopkov', 'username': 'danokhlopkov', 'language_code': 'en'}
     }"""
     update.message.forward(chat_id=TELEGRAM_SUPPORT_CHAT_ID)
+    bot.send_message(message.chat.id, "Спасибо! Ваша заявка принята и будет обработана в ближайшее время")
+    
 
 
 def forward_to_user(update, context):
