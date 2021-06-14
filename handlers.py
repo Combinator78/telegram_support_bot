@@ -25,7 +25,7 @@ def forward_to_chat(update, context):
         'from': {'id': 49820636, 'first_name': 'Daniil', 'is_bot': False, 'last_name': 'Okhlopkov', 'username': 'danokhlopkov', 'language_code': 'en'}
     }"""
     update.message.forward(chat_id=TELEGRAM_SUPPORT_CHAT_ID)
-    bot.send_message(message.from_user.id, "Я тебя не понимаю.")
+    update.message.reply_text(WELCOME_MESSAGE)
     
 
 
