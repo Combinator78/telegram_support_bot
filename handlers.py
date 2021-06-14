@@ -24,8 +24,16 @@ def forward_to_chat(update, context):
         'text': 'TEST QOO', 'entities': [], 'caption_entities': [], 'photo': [], 'new_chat_members': [], 'new_chat_photo': [], 'delete_chat_photo': False, 'group_chat_created': False, 'supergroup_chat_created': False, 'channel_chat_created': False, 
         'from': {'id': 49820636, 'first_name': 'Daniil', 'is_bot': False, 'last_name': 'Okhlopkov', 'username': 'danokhlopkov', 'language_code': 'en'}
     }"""
+    keyboard = [
+        [
+            InlineKeyboardButton("1", callback_data=str(ONE)),
+            InlineKeyboardButton("2", callback_data=str(TWO)),
+        ]
+    ]
     update.message.forward(chat_id=TELEGRAM_SUPPORT_CHAT_ID)
     update.message.reply_text(WELCOME_MESSAGE)
+    
+    update.message.reply_text(text="Спасибо, Ваша заявка принята в работу! По результату вы получите ответное сообщение.")
     
 
 
